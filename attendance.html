@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Attendance</title>
+    <link rel="stylesheet" href="./assets/style.css">
+    <script type="module" src="./assets/attendance.js" defer></script>
+</head>
+<body>
+    <div id="attendance">
+        <h1>Track Attendance</h1>
+        <button id="backToDashboard">Back to Dashboard</button>
+        <select id="filterDay">
+            <option value="Tuesday">Tuesday</option>
+            <option value="Thursday">Thursday</option>
+        </select>
+        <select id="filterCategory">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+        <div id="athleteList"></div>
+        <button id="submitAttendance">Submit Attendance</button>
+    </div>
+</body>
+</html>
