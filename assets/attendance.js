@@ -25,7 +25,7 @@ const filterCategory = document.getElementById("filterCategory");
 const athleteList = document.getElementById("athleteList");
 
 async function fetchAthletes() {
-    let athletes = [];
+    const athletes = [];
     const q = query(collection(db, "athletes"));
 
     const querySnapshot = await getDocs(q);
@@ -34,6 +34,25 @@ async function fetchAthletes() {
     });
 
     return athletes;
+}
+
+async function populateCategories() {
+    const athletes = await fetchAthletes();
+    const categories = new Set();
+
+    athletes.forEach(athlete => {
+        if (athlete.category) {
+            categories.add(athlete.category);
+        }
+    });
+
+    filterCategory.innerHTML = `<option value="">All Categories</option>`; // Default option
+    categories.forEach(category => {
+        const option = document.createElement("option");
+        option.value = category;
+        option.textContent = category;
+        filterCategory.appendChild(option);
+    });
 }
 
 async function renderAthletes() {
@@ -79,5 +98,6 @@ document.getElementById("submitAttendance").addEventListener("click", async () =
     }
 });
 
-// Initial render
+// Populate categories and render athletes on page load
+populateCategories();
 renderAthletes();
