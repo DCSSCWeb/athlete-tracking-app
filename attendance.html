@@ -3,25 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Track Attendance</title>
-    <link rel="stylesheet" href="./assets/style.css">
-    <script type="module" src="./assets/attendance.js" defer></script>
+    <title>Attendance</title>
+    <script type="module" src="./attendance.js"></script>
 </head>
 <body>
-    <div id="attendance">
-        <h1>Track Attendance</h1>
-        <button id="backToDashboard">Back to Dashboard</button>
+    <h1>Attendance Tracking</h1>
+    <div id="filterOptions">
+        <select id="filterCategory"></select>
         <select id="filterDay">
             <option value="Tuesday">Tuesday</option>
             <option value="Thursday">Thursday</option>
         </select>
-        <select id="filterCategory">
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Advanced">Advanced</option>
-        </select>
-        <div id="athleteList"></div>
-        <button id="submitAttendance">Submit Attendance</button>
+        <button id="applyFilter">Apply Filter</button>
     </div>
+    <div id="athletesList"></div>
 </body>
 </html>
