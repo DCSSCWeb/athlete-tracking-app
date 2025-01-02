@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Athlete Tracking App</title>
     <link rel="stylesheet" href="./assets/style.css">
-    <script type="module" src="./assets/app.js" defer></script>
+    <script type="module" src="./assets/index.js" defer></script>
 </head>
 <body>
     <div id="app">
         <h1>Athlete Tracking App</h1>
-
-        <!-- Login and Registration Forms -->
         <div id="auth-section">
             <div id="login">
                 <h2>Login</h2>
@@ -21,7 +19,6 @@
                     <button type="submit">Login</button>
                 </form>
             </div>
-
             <div id="register">
                 <h2>Register</h2>
                 <form id="registerForm">
@@ -33,38 +30,6 @@
                         <option value="coach">Coach</option>
                     </select><br>
                     <button type="submit">Register</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- Main App Section -->
-        <div id="main-section" style="display: none;">
-            <h2>Welcome!</h2>
-            <button id="logoutButton">Logout</button>
-            
-            <div id="actions">
-                <h3>Actions</h3>
-                <button id="uploadCsvButton">Upload CSV</button>
-                <button id="markAttendanceButton">Mark Attendance</button>
-            </div>
-
-            <!-- Upload CSV -->
-            <div id="csvUpload" style="display: none;">
-                <h2>Upload CSV</h2>
-                <input type="file" id="csvFile" accept=".csv"><br>
-                <button id="uploadCsv">Upload CSV</button>
-            </div>
-
-            <!-- Attendance Tracking -->
-            <div id="attendance" style="display: none;">
-                <h2>Mark Attendance</h2>
-                <form id="attendanceForm">
-                    <select id="attendanceFilter">
-                        <option value="Tuesday">Tuesday</option>
-                        <option value="Thursday">Thursday</option>
-                    </select>
-                    <div id="athleteList"></div>
-                    <button type="submit">Submit Attendance</button>
                 </form>
             </div>
         </div>
