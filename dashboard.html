@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="./assets/style.css">
-    <script type="module" src="./assets/dashboard.js" defer></script>
+    <title>Coach Dashboard</title>
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <div id="dashboard">
-        <h1>Welcome to the Dashboard</h1>
-        <button id="logoutButton">Logout</button>
-        <div id="actions">
-            <button id="uploadCsvPage">Upload CSV</button>
-            <button id="trackAttendancePage">Track Attendance</button>
-        </div>
+    <h1>Coach Dashboard</h1>
+    <div>
+        <button id="uploadCsvButton">Upload CSV</button>
+        <button id="viewAttendanceButton">View Athletes & Record Attendance</button>
     </div>
+
+    <script>
+        document.getElementById('uploadCsvButton').addEventListener('click', () => {
+            window.location.href = "upload.html";
+        });
+
+        document.getElementById('viewAttendanceButton').addEventListener('click', () => {
+            window.location.href = "attendance.html";
+        });
+    </script>
 </body>
 </html>
